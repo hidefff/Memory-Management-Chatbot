@@ -120,8 +120,6 @@ ChatBotPanelDialog::ChatBotPanelDialog(wxWindow *parent, wxWindowID id)
 
     // create chat logic instance
     //created _chatlogic unique pointer
-    //std::unique_ptr<ChatLogic> _chatLogic(new ChatLogic()); 
-    //_chatLogic =  ChatLogic(new ChatLogic());
     _chatLogic = std::make_unique<ChatLogic>();
 
     // pass pointer to chatbot dialog so answers can be displayed in GUI
@@ -139,7 +137,7 @@ ChatBotPanelDialog::~ChatBotPanelDialog()
     //// STUDENT CODE
     ////
 
-    _chatLogic.release();
+    //_chatLogic.release();
 
     ////
     //// EOF STUDENT CODE
